@@ -20,11 +20,11 @@ class Controller extends BaseController
 
         $filename = time() . '.png';
         //save image
-        \storage::disk($path)->put($filename, base64_decode($image));
+        \Storage::disk($path)->put($filename, base64_decode($image));
 
         //return the path
         //url is the base url exp:localhost::8000
-        return URL::to('/') . '/storage/' . $path . '/' . $filename;
+        return URL::to('/') . '/storage' . '/' . $filename;
 
     }
 }

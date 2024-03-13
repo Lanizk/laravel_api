@@ -31,4 +31,9 @@ class post extends Model
     {
         return $this->hasMany(like::class);
     }
+
+    public function flags()
+    {
+        return $this->hasMany(Flag::class);
+    }
 }
